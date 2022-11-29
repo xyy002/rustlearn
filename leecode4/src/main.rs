@@ -6,30 +6,31 @@ pub struct Solution{
 
 impl Solution {
     pub fn subarray_lcm(nums: Vec<i32>, k: i32) -> i32 {
-        let mut tot :i32=1;
-        let mut ans:i32=0;
-        for (i,value) in nums.iter().enumerate() {
-           for _ in 0..i {
-            tot=lcm(tot,*value);
-            if tot == k{
-                ans+=1;
+        let mut ans :i32=0;
+        for i in 0..nums.len(){
+            let mut x = &nums[i];
+            for n in 0..i{
+                // let mut y = &nums[n];
+                if *(&lcm(*x, *(&nums[n])))==k{
+                    ans+=1;
+                }
+                else {
+                    break;
+                }
             }
-            if tot>k {
-                break;
-            }
-           }
         }
-        ans
+        return ans;
     }
    
 }
 pub fn gcd(a:i32,b:i32)->i32{
-    let temp =a%b;
-    if temp!=0{
+    let mut temp:i32 =a%b;
+    if temp>0{
         return gcd(b, temp);
     }
-    return b;
-
+    else {
+        return b;
+    }
     
 }
 pub fn lcm(a:i32,b:i32)-> i32{
