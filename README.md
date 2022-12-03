@@ -7,3 +7,7 @@
 6. leecode9 合并两个有序数列
 7. leetcode10 删除有序数组中的重复项
 8. leetcode11 转移元素
+9. leetcode12 搜索插入位置
+10. leetcode13 最后一个单词的长度
+11. leetcode14 加一
+12. leetcode15 二进制求和
