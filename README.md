@@ -14,5 +14,3 @@
 13. leetcode16
 14. leetcode17 删除有序数列重复元素
 15. LeetCode18 合并两个有序数组
-16. leetcode20 
-17. leetcode21 excel表列序号
